@@ -8,15 +8,22 @@ I only have two MIDI keyboards that my wife uses from time to time. I have no mu
 
 Now I am trying to send MIDI commands directly from the EV3 to the soft synth, with multicast MIDI.
 
-Multicast MIDI is not a MIDI standard but there are several applications that makes use of it, like TouchDAW. TouchDAW also understands RTP-MIDI and if I ever understand how to send RTP-MIDI messages from ev3dev will try change this program.
+Multicast MIDI is not a MIDI standard but there are several applications that make use of it, like TouchDAW. TouchDAW also understands RTP-MIDI and if I ever understand how to send RTP-MIDI messages from ev3dev will try changing this program.
 
 If you are using a computer as s synth (or as a gateway to a real synth) you need to run multimidcast or qmidinet or any other application that can work as multicast MIDI router.
 
-For the moment, it uses 'pybricks-micropython' library included with ev3dev (I'm using stretch snapshot released in 2020-04-10). Unlike full python3 bindings, micropython loads very fast but I didn't figure how to detect when execution ends so I cannot send 'all notes off' to ensure no note gets stuck on the synth side. 
+For the moment, I'm using 'pybricks-micropython' included with ev3dev (I'm using stretch snapshot released in 2020-04-10). Unlike full python3 bindings, micropython loads very fast but I didn't figure how to detect when execution ends so I cannot send 'all notes off' to ensure no note gets stuck on the synth side. 
 
 I include these two commands that were built for EV3 from their source code:
 
 - Dirk Jagdmann's multimidicast (https://llg.cubic.org/tools/multimidicast/)
 - Josh Lehan's aMIDIcat (http://krellan.com/amidicat/)
+
+You can use more than one EV3 to extend your note range. I'm testing it with 2 EV3 each one with 4 touch sensors.
+The setup is the same on each EV3, you just need to change the notes assigned to each touch sensor. I didn't tried more EV3 but it should work [except, maybe, for wi-fi limitations to multicast].
+
+I get some notes 'stucked' on the synth size. Not sure if is my laptop fault or my wireless router fault, usually I just press Rosegarden 'panic' button to clear it. When I was recording my sons playing with it, I noticed that it hapened much more frequently... somehow my smartphone was causing  it.
+
+So I've been reading TouchDAW's FAQ and other posts on the net regarding midicast problems... if you have problems try to disable bluetooth on everything, also keeping the number of Wi-Fi clients as low as possible or even using a dedicates AP just for your MIDI network. Or (and I'm really considering trying it) get and old USB-to-Ethernet adapter and discard Wi-Fi, connect your EV3 to your laptop through a RJ-45 ethernet cable.
 
 Details: https://ofalcao.pt/blog/series/lego-ipmidi
