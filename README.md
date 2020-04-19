@@ -22,8 +22,8 @@ I include these two programs that were built for EV3 from their source code:
 You can use more than one EV3 to extend your note range. I'm testing it with 2 EV3 each one with 4 touch sensors.
 The setup is the same on each EV3, you just need to change the notes assigned to each touch sensor. I didn't try more EV3 but it should work (except, maybe, for wi-fi limitations to multicast).
 
-I get some notes 'stucked' on the synth size. Not sure if is my laptop fault or my wireless router fault, usually I just press Rosegarden 'panic' button to clear it. When I was recording my sons playing with it, I noticed that it hapened much more frequently... somehow my smartphone was causing  it.
+I get some notes 'stucked' on the synth size. Not sure if it is my laptop fault or my wireless router fault, usually I just press Rosegarden 'panic' button to clear it. When I was recording my sons playing with it, I noticed that it hapened much more frequently... somehow my smartphone was causing  it.
 
-So I've been reading TouchDAW's FAQ and other posts on the net regarding midicast problems... if you have problems try to disable bluetooth on everything, also keeping the number of Wi-Fi clients as low as possible or even using a dedicates AP just for your MIDI network. Or (and I'm really considering trying it) get and old USB-to-Ethernet adapter and discard Wi-Fi, connect your EV3 to your laptop through a RJ-45 ethernet cable.
+So I've been reading TouchDAW's FAQ and other posts on the net regarding midicast problems... if you have problems try to disable bluetooth on everything, also keeping the number of Wi-Fi clients as low as possible or even using a dedicated AP just for your MIDI network. Or (and I'm really considering trying it) get and old USB-to-Ethernet adapter and discard Wi-Fi, connect your EV3 to your laptop through a RJ-45 ethernet cable.
 
 Details: https://ofalcao.pt/blog/series/lego-ipmidi
